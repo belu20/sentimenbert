@@ -8,7 +8,6 @@ from transformers import TFBertForSequenceClassification
 PRE_TRAINED_MODEL = 'indobenchmark/indobert-base-p2'
 bert_tokenizer = BertTokenizer.from_pretrained(PRE_TRAINED_MODEL)
 bert_model = TFBertForSequenceClassification.from_pretrained(PRE_TRAINED_MODEL, num_labels=2)
-bert_model.load_weights('model.h5')
 
 
 def predict_sentiment(text):
